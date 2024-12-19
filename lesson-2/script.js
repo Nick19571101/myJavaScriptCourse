@@ -8,7 +8,7 @@ phrase.onclick = function () {
 	txt.innerHTML = 'Hello Nick!'
 }
 phrase.addEventListener('click', () => {
-	date.innerHTML = new Date()
+	date.innerHTML = new Date().toLocaleDateString()
 })
 phrase.addEventListener('click', () => {
 	txt.style.color = 'red'
