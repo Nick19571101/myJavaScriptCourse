@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 2</title>
+</head>
+
+<body>
+	<script>
+		let initialValue = "і що сало ласощі "// рядок це масив символів
+		let value = initialValue.replace(/\s+/g, "").toLowerCase()
+		let len = value.length // 6 symbols
+		let isPalindrome
+		for (let i = 0; i < len / 2; i++) {
+			if (value[i] !== value[len - 1 - i]) {
+				isPalindrome = false
+				break
+			}
+			isPalindrome = true
+		}
+		if (isPalindrome) {
+			console.log('Значення ' + initialValue + " є паліндромом")
+		} else {
+			console.log('Значення ' + initialValue + " не є паліндромом")
+		}
+	</script>
+</body>
+
+</html>

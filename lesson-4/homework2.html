@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homework 2</title>
+</head>
+
+<body>
+	<script>
+		// const fruits = ["яблуко", "банан", "вишня"];
+		// const randomFruit = fruits[Math.floor(Math.random() * fruits.length)];
+		// alert(randomFruit);
+		// const colors = ["червоний", "синій", "зелений", "жовтий", "фіолетовий"];
+		// const randomColorIndex = Math.floor(Math.random() * colors.length);
+		// const selectedColor = colors[randomColorIndex];
+
+		// console.log(`Вибраний колір: ${selectedColor}`);
+
+		const getRandomNumber = (min, max) => {
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+		const operators = ['+', '-', '*', '/'];
+		const num1 = getRandomNumber(5, 20)
+		const num2 = getRandomNumber(10, 20)
+		const operator = operators[getRandomNumber(0, operators.length - 1)]
+		let expression = `${num1}  ${operator}  ${num2}`
+		alert(expression);
+		switch (operator) {
+			case '+':
+				result = num1 + num2;
+				break;
+			case '-':
+				result = num1 - num2;
+				break;
+			case '*':
+				result = num1 * num2;
+				break;
+			case '/':
+				result = num1 / num2;
+				break;
+			default:
+				result = 'Невідомий оператор';
+		}
+		console.log(result);
+		const yourAnswer = prompt('Введіть вашу відповідь')
+		if (result == yourAnswer) {
+			alert("Ваша відповідь вірна!")
+		} else {
+			alert("Ви помилились, спробуйте ще раз!")
+		}
+
+
+
+	</script>
+</body>
+
+</html>
