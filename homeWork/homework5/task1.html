@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home task 1 lesson5</title>
+</head>
+
+<body>
+	<script>
+		const getValue = (message) => {
+			while (true) {
+				let value = prompt(message)
+				let isValid = !isNaN(value) && value !== '' && value !== null
+				if (isValid) return Number(value)
+			}
+		}
+		let yourWeight = getValue("Введіть вашу вагу")
+		let youtHeight = getValue("Введіть ваш зріст")
+
+		const getQuadrateHeight = (youtHeight) => Math.pow(youtHeight, 2)
+		let square = getQuadrateHeight(youtHeight)
+		let indexMassBody = yourWeight / square
+
+		alert(`Ваш індекс маси тіла: ${Math.floor(indexMassBody)}`)
+
+	</script>
+</body>
+
+</html>

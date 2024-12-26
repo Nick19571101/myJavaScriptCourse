@@ -18,9 +18,9 @@
 		<b></b>
 	</div>
 	<script>
-		let getValue = () => { Number(document.querySelector('#temp').value) }
-		let toCelsius = (temp) => { 5 / 9 * (temp - 32) }
-		let toFahrenheit = (temp) => { 9 / 5 * tempC + 32 }
+		let getValue = () => Number(document.querySelector('#temp').value)
+		let toCelsius = (temp) => 5 / 9 * (temp - 32)
+		let toFahrenheit = (temp) => 9 / 5 * temp + 32
 
 		let convert = (converter) => {
 			return () => {
@@ -30,19 +30,28 @@
 			}
 		}
 		document.querySelector('#btnToC').onclick = convert(toCelsius)
+		document.querySelector('#btnToF').onclick = convert(toFahrenheit)
 		// document.querySelector('#btnToC').onclick = () => {
 		// 	let tempF = Number(document.querySelector('#temp').value)
 		// 	let tempC = (5 / 9) * (tempF - 32)
 		// 	showResult(tempC)
 		// }
-		document.querySelector('#btnToF').onclick = () => {
-			let tempC = Number(document.querySelector('#temp').value)
-			let tempF = (9 / 5) * tempC + 32
-			showResult(tempF)
-		}
+		// document.querySelector('#btnToF').onclick = () => {
+		// 	let tempC = Number(document.querySelector('#temp').value)
+		// 	let tempF = (9 / 5) * tempC + 32
+		// 	showResult(tempF)
+		// }
 		const showResult = result => {
 			let output = document.querySelector('#output')
 			output.innerHTML = result.toFixed(3)
+		}
+		let throwCount = +prompt("Скільки разів ви хочете кинути кубик?")
+		let random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
+
+		for (i = 0; i < throwCount; i++) {
+			const res = random(1, 6)
+			console.log(res);
+
 		}
 	</script>
 </body>
