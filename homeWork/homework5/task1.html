@@ -18,46 +18,24 @@
 		}
 		let yourWeight = getValue("Введіть вашу вагу")
 		let yourHeight = getValue("Введіть ваш зріст")
-
 		const getQuadrateHeight = (yourHeight) => Math.pow(yourHeight, 2)
 		let square = getQuadrateHeight(yourHeight)
 		let indexMassBody = (yourWeight / square).toFixed(1)
-
 		alert(`Ваш індекс маси тіла: ${indexMassBody}`)
-		// alert(`Ваш індекс маси тіла: ${Math.floor(indexMassBody)}`)
-		console.log(indexMassBody);
-
-		// if (indexMassBody < 18.5) {
-		// 	alert("У вас недостатня вага - ви кощей...")
-		// } else if (18.6 <= indexMassBody < 24.9) {
-		// 	alert("У вас нормальна вага - ви молодець...")
-		// } else if
-		// 	(25 <= indexMassBody < 29.9){
-		// 	alert("У вас надмірна вага - ви товстунець...")
-		// }
-		//  else if (indexMassBody >= 30) {
-		// 	alert("У вас ожиріння - ви свинюка...")
-		// }
-		// let x = indexMassBody
-		// console.log(indexMassBody);
-
-		// switch (indexMassBody) {
-		// 	case x:
-		// 		alert("У вас недостатня вага - ви кощей...")
-		// 		break;
-		// 	case 18.6 < x < 24.9:
-		// 		alert("У вас нормальна вага - ви молодець...")
-		// 		break;
-		// 	case 25 <= x < 29.9:
-		// 		alert("У вас надмірна вага - ви товстунець...")
-		// 		break;
-		// 	case x > 30:
-		// 		alert("У вас ожиріння - ви свинюка...")
-		// 		break;
-		// }
-
-
-
+		const x = indexMassBody; 
+		switch (true) {
+    		case x < 18.6:
+        		alert("У вас недостатня вага - ви кощей...");
+        	break;
+    		case x < 24.9:
+        		alert("У вас нормальна вага - ви молодець...");
+        	break;
+    		case x < 29.9:
+        		alert("У вас надмірна вага - ви товстунець...");
+        	break;
+    		default:
+        		alert("У вас ожиріння - ви свинюка...");
+		}
 	</script>
 </body>
 
