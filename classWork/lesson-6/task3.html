@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 3</title>
+</head>
+
+<body>
+	<script>
+		let randomNumber = Math.floor(Math.random() * 100) + 1
+		let attempts = []
+		while (true) {
+			let value = Number(prompt("Введіть якесь число"))
+			attempts.push(value)
+
+			if (value == randomNumber) {
+				alert("Ви вгадали задане число  " + randomNumber)
+				break
+			}
+			else if (value > randomNumber) {
+				alert("Я загадав значення меньше  " + value)
+			}
+			else if (value < randomNumber) {
+				alert("Я загадав значення більше  " + value)
+			}
+		}
+		console.log('ви зробили ' + attempts.length + ' спроб');
+		attempts.forEach(x => console.log(x))
+	</script>
+</body>
+
+</html>
