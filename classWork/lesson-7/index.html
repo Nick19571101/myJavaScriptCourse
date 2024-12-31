@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lesson 7</title>
+</head>
+
+<body>
+	<script>
+		let product1 = createProduct(1, "Phone", 1000)
+		let product2 = createProduct(2, "Laptop", 5000)
+
+		function createProduct(id, name, price) {
+			let product = {}
+			product.id = id
+			product.name = name
+			product.price = price
+			product.displayInfo = function display() {
+				console.log(this.id)
+				console.log(this.name)
+				console.log(this.price)
+			}
+			return product
+		}
+		class Product {
+			constructor(id, name, price) {
+				this.id = id
+				this.name = name
+				this.price = price
+			}
+			displayInfo() {
+				console.log(this.id)
+				console.log(this.name)
+				console.log(this.price)
+			}
+		}
+		let product3 = new Product(3, "IPhone", 1500)
+		product1.displayInfo()
+		product2.displayInfo()
+		product3.displayInfo()
+	</script>
+</body>
+
+</html>
