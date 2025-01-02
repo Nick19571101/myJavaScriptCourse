@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lesson 8</title>
+	<style>
+		body {
+			font-family: "Geist", sans-serif;
+		}
+
+		.test {
+			color: rgb(153, 21, 21);
+		}
+	</style>
+</head>
+
+<body>
+	<h1 id="title">Hello World</h1>
+	<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam libero quibusdam voluptates culpa
+		velit
+		impedit ea?
+	</p>
+	<script>
+		let e = document.getElementById('title')
+		e.innerHTML = "<b>Hello</b>"
+		// e.textContent = "<b>Hello</b>"
+
+		let p = document.querySelector('.text')
+		p.style = 'color: rgb(4, 101, 31 )'
+		// p.style = 'font-size: 20px'
+	</script>
+</body>
+
+</html>
