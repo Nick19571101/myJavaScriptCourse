@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lesson 9</title>
+</head>
+<style>
+	.myClass {
+		color: blue;
+		background-color: orange;
+		padding: 2rem 5rem;
+	}
+</style>
+
+<body>
+	<div id="myDiv" onclick="changeColor()">Hello World!</div>
+	<script>
+		let div = document.querySelector('#myDiv')
+		div.addEventListener('click', changeColor)
+
+		function changeColor() {
+			div.style.color = "white"
+			div.style.backgroundColor = 'blue'
+			div.style.padding = "5rem"
+		}
+
+		div.classList.add('myClass')
+	</script>
+</body>
+
+</html>

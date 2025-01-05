@@ -1,6 +1,7 @@
 const contactBook = {
 	contacts: [
 		{
+			id: 1,
 			firstName: 'John',
 			lastName: 'Doe',
 			phone: '+1-202-555-0101',
@@ -8,6 +9,7 @@ const contactBook = {
 			description: 'Software Engineer at Tech Corp.',
 		},
 		{
+			id: 2,
 			firstName: 'Jane',
 			lastName: 'Smith',
 			phone: '+1-202-555-0102',
@@ -15,6 +17,7 @@ const contactBook = {
 			description: 'Project Manager with a focus on IT projects.',
 		},
 		{
+			id: 3,
 			firstName: 'Michael',
 			lastName: 'Johnson',
 			phone: '+1-202-555-0103',
@@ -22,6 +25,7 @@ const contactBook = {
 			description: 'UI/UX Designer at Creative Studio.',
 		},
 		{
+			id: 4,
 			firstName: 'Emily',
 			lastName: 'Davis',
 			phone: '+1-202-555-0104',
@@ -29,6 +33,7 @@ const contactBook = {
 			description: 'Data Analyst with expertise in big data.',
 		},
 		{
+			id: 5,
 			firstName: 'David',
 			lastName: 'Wilson',
 			phone: '+1-202-555-0105',
@@ -36,6 +41,7 @@ const contactBook = {
 			description: 'DevOps Engineer at Cloud Solutions.',
 		},
 		{
+			id: 6,
 			firstName: 'Sarah',
 			lastName: 'Brown',
 			phone: '+1-202-555-0106',
@@ -43,6 +49,7 @@ const contactBook = {
 			description: 'Content Writer and Marketing Specialist.',
 		},
 		{
+			id: 7,
 			firstName: 'James',
 			lastName: 'Williams',
 			phone: '+1-202-555-0107',
@@ -50,6 +57,7 @@ const contactBook = {
 			description: 'Cybersecurity Expert with 10 years of experience.',
 		},
 		{
+			id: 8,
 			firstName: 'Olivia',
 			lastName: 'Jones',
 			phone: '+1-202-555-0108',
@@ -57,6 +65,7 @@ const contactBook = {
 			description: 'HR Manager specializing in IT recruitment.',
 		},
 		{
+			id: 9,
 			firstName: 'Robert',
 			lastName: 'Miller',
 			phone: '+1-202-555-0109',
@@ -65,6 +74,7 @@ const contactBook = {
 				'Full-Stack Developer working with JavaScript and Python.',
 		},
 		{
+			id: 10,
 			firstName: 'Sophia',
 			lastName: 'Anderson',
 			phone: '+1-202-555-0110',
@@ -72,7 +82,22 @@ const contactBook = {
 			description: 'Business Analyst focusing on process optimization.',
 		},
 	],
-	add(contact) {},
-	remove(id) {},
-	update(id, contact) {},
+	lastId: 10,
+	add(contact) {
+		this.lastId++
+		contact.id = this.lastId
+		this.contacts.push(contact)
+	},
+	remove(id) {
+		const index = this.contacts.findIndex(x => x.id == id)
+		this.contacts.splice(index, 1)
+	},
+	update(id, contact) {
+		let index = this.contacts.findIndex(x => x.id == id)
+		this.contacts[index] = contact
+	},
+	find(id) {
+		let index = this.contacts.findIndex(x => x.id == id)
+		return this.contacts[index]
+	},
 }

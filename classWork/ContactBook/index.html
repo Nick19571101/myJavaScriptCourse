@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Contact-book</title>
+</head>
+
+<body>
+
+	<form action="" id="contactForm">
+		<div>
+			<label for="">First Name</label>
+			<input type="text" id="firstNameInput">
+		</div>
+		<div>
+			<label for="">Last Name</label>
+			<input type="text" id="lastNameInput">
+		</div>
+		<div>
+			<label for="">Phone</label>
+			<input type="text" id="phoneInput">
+		</div>
+		<div>
+			<label for="">Email</label>
+			<input type="text" id="emailInput">
+		</div>
+		<div>
+			<label for="">Description</label>
+			<input type="text" id="descriptionInput">
+		</div>
+		<button type="submit" id="btn">Зберегти</button>
+	</form>
+	<section id="contact-list">
+		<!-- <h2>John Doe</h2>
+		<p>Phone: +1-202-555-0101</p>
+		<p>Email: john.doe@example.com</p>
+		<p>Software Engineer at Tech Corp.</p> -->
+	</section>
+
+	<script src="../../node_modules/mustache/mustache.min.js"></script>
+	<script src="js/model.js"></script>
+	<script src="js/view.js"></script>
+	<script src="js/controller.js"></script>
+</body>
+
+</html>

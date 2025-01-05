@@ -22,11 +22,11 @@ const contactList = {
 			element.appendChild(section)
 		})
 	},
-	renderWithTemplate(contacts, element, template) {
-		let html = ''
-		contacts.forEach(contact => {
-			html += Mustache.render(template, contact)
-		})
-		element.innerHTML = html
-	},
+	// renderWithTemplate(contacts, element, template) {
+	// 	let html = ''
+	// 	contacts.forEach(contact => {
+	// 		html += Mustache.render(template, contact)
+	// 	})
+	// 	element.innerHTML = html
+	// },
 }
