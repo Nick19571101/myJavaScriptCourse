@@ -10,7 +10,7 @@
 
 <body>
 
-	<form action="" id="contactForm">
+	<form action="#" id="contactForm">
 		<div>
 			<label for="">First Name</label>
 			<input type="text" id="firstNameInput">
@@ -33,6 +33,16 @@
 		</div>
 		<button type="submit" id="btn">Зберегти</button>
 	</form>
+	<script id="template" type="text/template">
+		<section class="contact">
+			<button onclick="edit({{id}})" >Редагувати</button>
+			<button onclick="remove({{id}})">Видалити</button>
+			<h2>{{firstName}} {{lastName}}</h2>
+			<h3>Phone: {{phone}}</h3>
+			<p>Email: {{email}}</p>
+			<p>{{description}}</p>
+		</section>
+	</script>
 	<section id="contact-list">
 		<!-- <h2>John Doe</h2>
 		<p>Phone: +1-202-555-0101</p>
