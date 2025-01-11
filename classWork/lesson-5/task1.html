@@ -8,20 +8,29 @@
 </head>
 
 <body>
-	<script src="../components/my-library.js"></script>
+	<script src="../../components/my-library.js"></script>
 	<script>
 		// function getCircleArea(radius) {
 		// 	return Math.PI * Math.pow(radius, 2)
 		// }
+		// function getNumericValue(message) {
+		// 	while (true) {
+		// 		let value = prompt(message)
+		// 		let isValid = !isNaN(value) && value !== '' && value !== null
+		// 		if (isValid) return Number(value)
+		// 	}
+		// }
+
 		const getCircleArea = (radius) => Math.PI * Math.pow(radius, 2)
+		//Math.pow(radius, 2) -це означає що радіус возносимо в квадрат
 
 		function getCirclePerimeter(radius) {
 			return 2 * Math.PI * radius
 		}
 
 		let radius = getNumericValue("Введіть радіус")
-		let area = getCircleArea(radius)
-		let perimeter = getCirclePerimeter(radius)
+		let area = getCircleArea(radius).toFixed(2)
+		let perimeter = getCirclePerimeter(radius).toFixed(2)
 
 		alert(area)
 		alert(perimeter)

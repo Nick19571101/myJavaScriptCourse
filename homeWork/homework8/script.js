@@ -1,3 +1,14 @@
+const bookForm = document.querySelector('#form')
+const titleInput = document.querySelector('#titleInput')
+const authorInput = document.querySelector('#authorInput')
+const yearInput = document.querySelector('#yearInput')
+const genreInput = document.querySelector('#genreInput')
+const html = document.querySelector('#list')
+
+function renderBook() {
+	bookList.render(bookData.books, html)
+}
+
 const bookData = {
 	books: [
 		{
@@ -55,5 +66,16 @@ const bookData = {
 		return this.books[index]
 	},
 }
-const html = document.querySelector('#list')
-bookList.render(bookData.books, html)
+// bookList.render(bookData.books, html)
+bookForm.addEventListener('submit', e => {
+	e.preventDefault()
+	let book = {
+		title: titleInput.value,
+		author: authorInput.value,
+		year: yearInput.value,
+		genre: genreInput.value,
+	}
+	bookData.add(book)
+	renderBook()
+})
+renderBook()
